@@ -8,7 +8,7 @@
   },
   "scripts": {
     "devStart" : "nodemon index.js",
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "name": "ejs",
   "version": "1.0.0",
