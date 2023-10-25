@@ -19,7 +19,7 @@ app.use(session({
 //--------------------------------
 app.use(express.static("public")); //public folder m html aur css file ko link krne ka middleware
 app.set("view engine" , "ejs"); //ejs set hogya as a view engine
-const port = '0.0.0.0'; //port number
+const port = 5000 //port number
 
 //EJS is used to send dynamic content
 
@@ -62,13 +62,6 @@ app.get("/test" , function(req,res){
 
 
 
-app.listen(port,function(err){
-    if(err){
-        console.log("Server error...",err);
-    }
-    else{
-        console.log(`Server started at ${port}`);
-    }
+app.listen(process.env.PORT || port,() => console.log(`listening on port ${port}`))
 
-})
 
